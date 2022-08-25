@@ -466,3 +466,6 @@ junit/
 # Key Configurations Directory (added by dkhundley)
 keys/
 sensitive/
+
+# Virtual environment for Tensorflow Object Detection
+tfod/

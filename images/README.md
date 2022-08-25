@@ -1,0 +1,2 @@
+# Images Directory
+This is the directory that will ultimately hold your training / testing images. Because I intentionally using the `.gitignore` file to ignore uploads of the image to ensure the uploaded repository does not get too large. I have included a script that will allow you to capture your own training and testing images over in the `src` directory!

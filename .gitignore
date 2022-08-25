@@ -469,3 +469,6 @@ sensitive/
 
 # Virtual environment for Tensorflow Object Detection
 tfod/
+
+# Train / Test Images
+images/*.jpg

@@ -471,4 +471,5 @@ sensitive/
 tfod/
 
 # Train / Test Images
-images/*.jpg
+images/train/*.jpg
+images/test/*.jpg

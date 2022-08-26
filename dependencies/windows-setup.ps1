@@ -1,10 +1,10 @@
 # Changing to root directory
 cd ..
 
-# Instantiating virtual enviornment
+# Instantiating virtual environment
 python -m venv tfod
 
-# Activating virtual enviornment
+# Activating virtual environment
 .\tfod\Scripts\activate
 
 # Installing the required Python dependencies from PyPi

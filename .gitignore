@@ -106,6 +106,9 @@ coverage.xml
 *.mo
 *.pot
 
+# DS Store
+*.DS_Store
+
 # Django stuff:
 *.log
 local_settings.py
@@ -473,3 +476,6 @@ tfod/
 # Train / Test Images
 images/train/*.jpg
 images/test/*.jpg
+
+# Image Annotator
+labelImg/

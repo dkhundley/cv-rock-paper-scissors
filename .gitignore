@@ -466,6 +466,9 @@ __pycache__/
 OpenCover/
 junit/
 
+# Virtual Environments
+venv/
+
 # Key Configurations Directory (added by dkhundley)
 keys/
 sensitive/

@@ -481,5 +481,5 @@ sensitive/
 
 # Train / Test Images
 images/all_images/*
-images/train/*
-images/test/*
+images/training/*
+images/validation/*

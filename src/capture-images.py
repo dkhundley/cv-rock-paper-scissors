@@ -12,11 +12,10 @@ import time
 BASE_IMAGES_FILEPATH = os.path.join('..', 'images')
 
 # Setting the filepaths for the respective training and testing image storage locations
-TRAINING_IMAGES_FILEPATH = os.path.join(BASE_IMAGES_FILEPATH, 'train')
-TESTING_IMAGES_FILEPATH = os.path.join(BASE_IMAGES_FILEPATH, 'test')
+ALL_IMAGES_FILEPATH = os.path.join(BASE_IMAGES_FILEPATH, 'all_images')
 
 # Collecting the filepaths into an iterable array
-IMAGE_FILEPATHS = [BASE_IMAGES_FILEPATH, TRAINING_IMAGES_FILEPATH, TESTING_IMAGES_FILEPATH]
+IMAGE_FILEPATHS = [BASE_IMAGES_FILEPATH, ALL_IMAGES_FILEPATH]
 
 # Looping over IMAGE_FILEPATHS to create the directories if they do not already exist
 for image_path in IMAGE_FILEPATHS:
@@ -30,8 +29,7 @@ for image_path in IMAGE_FILEPATHS:
 IMAGE_LABELS = ['rock', 'paper', 'scissors']
 
 # Setting the number of training / testing images to capture
-NUM_TRAIN_IMAGES = 8
-NUM_TEST_IMAGES = 2
+NUM_IMAGES = 10
 
 # Starting capture for each respective label
 for label in IMAGE_LABELS:
@@ -40,16 +38,16 @@ for label in IMAGE_LABELS:
     video_capture = cv2.VideoCapture(0)
 
     # Starting capture of training images
-    print(f'Starting capture of training images for "{label}" in 5 seconds...')
+    print(f'Starting capture of images for "{label}" in 5 seconds...')
     time.sleep(5)
-    for image_number in range(NUM_TRAIN_IMAGES):
-        print(f'Collecting "{label}" training image #{image_number + 1}...')
+    for image_number in range(NUM_IMAGES):
+        print(f'Collecting "{label}" image #{image_number + 1}...')
 
         # Getting the captured frame from the webcam
         ret, frame = video_capture.read()
 
         # Creating the appropriate name of the image with a unique identifier
-        image_name = os.path.join(TRAINING_IMAGES_FILEPATH, f'{label}.{str(uuid.uuid1())}.jpg')
+        image_name = os.path.join(ALL_IMAGES_FILEPATH, f'{label}-{str(uuid.uuid1())}.jpg')
 
         # Writing out the image file
         cv2.imwrite(image_name, frame)
@@ -57,33 +55,8 @@ for label in IMAGE_LABELS:
         # Displaying the captured image
         cv2.imshow('Image Capture', frame)
 
-        # Waiting 2 seconds for the next captured image
-        time.sleep(2)
-
-        # Allowing the user to break out of the image capture by pressing the "Q" key
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
-
-    # Starting capture of testing images
-    print(f'Starting capture of testing images for "{label}" in 5 seconds...')
-    time.sleep(5)
-    for image_number in range(NUM_TEST_IMAGES):
-        print(f'Collecting "{label}" testing image #{image_number + 1}...')
-
-        # Getting the captured frame from the webcam
-        ret, frame = video_capture.read()
-
-        # Creating the appropriate name of the image with a unique identifier
-        image_name = os.path.join(TESTING_IMAGES_FILEPATH, f'{label}.{str(uuid.uuid1())}.jpg')
-
-        # Writing out the image file
-        cv2.imwrite(image_name, frame)
-
-        # Displaying the captured image
-        cv2.imshow('Image Capture', frame)
-
-        # Waiting 2 seconds for the next captured image
-        time.sleep(2)
+        # Waiting 3 seconds for the next captured image
+        time.sleep(3)
 
         # Allowing the user to break out of the image capture by pressing the "Q" key
         if cv2.waitKey(1) & 0xFF == ord('q'):

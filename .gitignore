@@ -469,16 +469,14 @@ junit/
 # Virtual Environments
 venv/
 
+# Other GitHub Repos
+other-repos/*
+
 # Key Configurations Directory (added by dkhundley)
 keys/
 sensitive/
 
-# Virtual environment for Tensorflow Object Detection
-tfod/
-
 # Train / Test Images
+images/all_images/*.jpg
 images/train/*.jpg
 images/test/*.jpg
-
-# Image Annotator
-labelImg/

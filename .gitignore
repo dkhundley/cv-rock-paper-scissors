@@ -472,11 +472,14 @@ venv/
 # Other GitHub Repos
 other-repos/*
 
+# Test Jupyter Notebooks
+notebooks-test/
+
 # Key Configurations Directory (added by dkhundley)
 keys/
 sensitive/
 
 # Train / Test Images
-images/all_images/*.jpg
-images/train/*.jpg
-images/test/*.jpg
+images/all_images/*
+images/train/*
+images/test/*

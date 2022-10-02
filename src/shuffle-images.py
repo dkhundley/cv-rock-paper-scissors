@@ -30,6 +30,7 @@ def get_split_counts(rps_label, jpg_filenames):
     return num_training_images, num_validation_images
 
 
+
 ## SCRIPT INITIATION
 ## ---------------------------------------------------------------------------------------------------------------------
 if __name__ == '__main__':

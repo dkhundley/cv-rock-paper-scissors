@@ -4,10 +4,10 @@
 cd ..
 
 # Instantiating virtual environment
-python -m venv tfod
+python -m venv venv
 
 # Activating virtual environment
-source tfod/bin/activate
+source venv/bin/activate
 
 # Installing the required Python dependencies from PyPi
 pip install -r dependencies/pip-requirements.txt

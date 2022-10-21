@@ -1,5 +1,14 @@
 # Computer Vision Rock Paper Scissors
 
+## macOS Setup
+This section will walk you through how to properly setup all the dependencies for this particular project. Please note that I am working on an Apple Silicon (M1) MacBook Pro, so your mileage may vary if you are working on an Intel-based Mac. Please be sure to follow these steps closely as this can be a challenging project to set up. If you have not already done so, you will need to ensure you already have Homebrew and Python installed on your machine. For context, the precise version of Python that I ran on my Mac when completing this project was Python 3.10.7.
+
+https://github.com/tensorflow/io/issues/1625#issuecomment-1128555922
+
+1. Establish a new Python virtual environment in your Git repository by running the following command: `python3 -m venv venv`.
+2. Activate the Python virutal enviornment by running the following command: `source venv/bin/activate`
+3. Install the Python dependencies noted in the `dependencies/requirements.txt` file by running the following: `pip3 install -r dependencies/requirements.txt`.
+
 ## Troubleshooting
 This section will include tips for troubleshooting.
 

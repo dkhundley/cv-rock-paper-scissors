@@ -1,8 +1,10 @@
-# Importing the necessary Python libraries
-import cv2
+# Importing the required first party Python libraries
 import os
 import uuid
 import time
+
+# Importing the required third party Python libraries
+import cv2
 
 
 

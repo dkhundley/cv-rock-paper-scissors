@@ -479,6 +479,9 @@ notebooks-test/
 keys/
 sensitive/
 
+# TensorFlow Object Detection Library
+src/object_detection/*
+
 # Train / Test Images
 images/all_images/*
 images/training/*
